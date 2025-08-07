@@ -74,4 +74,5 @@ const numArgs = (...args) => {
 }
 
 console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4, 5));
 
