@@ -133,7 +133,7 @@ Exercise 9
 Solve Exercise 9 here:
 */
 
-console.log("Exercise 8: Each existing starter pokemon in the dataset");
+console.log("Exercise 9: Each existing starter pokemon in the dataset");
 for (const element of pokemon) {
    if (element["starter"])
       console.log(element["name"]);
@@ -156,7 +156,7 @@ game.catchPokemon = (pokemonObj) => {
    game.party.push(pokemonObj);
 };
 game.catchPokemon(pokemon[148]);
-console.log("Exercise 9: Caught a Dragonite");
+console.log("Exercise 10: Caught a Dragonite");
 console.log(game.party);
 console.log();
 
@@ -173,7 +173,7 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 
-console.log("Exercise 9: Caught a Mewtwo but this time the game's number of Pokeballs go down");
+console.log("Exercise 11: Caught a Mewtwo but this time the game's number of Pokeballs go down");
 console.log("Before catching lists");
 console.log(game.items);
 console.log(game.party);
