@@ -290,7 +290,7 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
-console.log("Beginning of the level-up game status: ");
+console.log("Exercise 16: Beginning of the level-up exercises, show the game status");
 console.log(game);
 console.log();
 
@@ -336,12 +336,53 @@ Solve Exercise 18 here:
 */
 
 game.collection = [];
+
 game.catchPokemon = (pokemonObj) => {
-    game.party.length < 6 ? game.party.push(pokemonObj) : game.collection.push(pokemon);
+    game.party.length < 6 ? game.party.push(pokemonObj) : game.collection.push(pokemonObj);
     for (const element of game.items) {
         if (element["name"] == "pokeball") {
             element["quantity"] -= 1;
             break ;
         }
     }
+};
+
+const checkGameState = () => {
+    console.log("Items:");
+    console.log(game.items);
+    console.log("Party:");
+    console.log(game.party);
+    console.log("Collection:");
+    console.log(game.collection);
+    console.log();
+};
+
+console.log("Exercise 18: Catching a Mew with a full party");
+console.log("Before catching lists");
+checkGameState();
+game.catchPokemon(pokemon[150]);
+console.log("After catching lists:");
+checkGameState();
+
+/*
+Exercise 19
+Copy the `catchPokemon` method that you just wrote above, and paste it below. The time has come to make it so that we cannot catch a Pokemon when we do not have any pokeballs to catch it with. 
+
+Modify the method so that if there are no pokeballs a message will be displayed that there are not enough pokeballs to catch the desired Pokemon.
+
+Also, ensure that the Pokemon isn't added to the `game.party` or the `game.collection`.
+
+Solve Exercise 19 here:
+*/
+
+game.catchPokemon = (pokemonObj) => {
+    for (const element of game.items) {
+        if (element["name"] == "pokeball") {
+            if (element["quantity"] <= 0)
+                return ;
+            element["quantity"] -= 1;
+            break ;
+        }
+    }
+    game.party.length < 6 ? game.party.push(pokemonObj) : game.collection.push(pokemonObj);
 };

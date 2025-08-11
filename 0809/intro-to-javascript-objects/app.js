@@ -155,10 +155,18 @@ Solve Exercise 10 here:
 game.catchPokemon = (pokemonObj) => {
    game.party.push(pokemonObj);
 };
+
+const checkGameState = () => {
+    console.log("Items:");
+    console.log(game.items);
+    console.log("Party:");
+    console.log(game.party);
+    console.log();
+};
+
 game.catchPokemon(pokemon[148]);
 console.log("Exercise 10: Caught a Dragonite");
-console.log(game.party);
-console.log();
+checkGameState();
 
 /*
 Exercise 11
@@ -173,10 +181,6 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 
-console.log("Exercise 11: Caught a Mewtwo but this time the game's number of Pokeballs go down");
-console.log("Before catching lists");
-console.log(game.items);
-console.log(game.party);
 game.catchPokemon = (pokemonObj) => {
    game.party.push(pokemonObj);
    for (const element of game.items) {
@@ -186,12 +190,13 @@ game.catchPokemon = (pokemonObj) => {
       }
    }
 };
-console.log();
+
+console.log("Exercise 11: Caught a Mewtwo but this time the game's number of Pokeballs go down");
+console.log("Before catching lists");
+checkGameState();
 game.catchPokemon(pokemon[149]);
-console.log("After catching item list:");
-console.log(game.items);
-console.log(game.party);
-console.log();
+console.log("After catching lists:");
+checkGameState();
 
 /*
 Exercise 12
