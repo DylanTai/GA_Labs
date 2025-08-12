@@ -115,4 +115,3 @@ resetEl.addEventListener("click", init);
 //3) Upon loading, the game state should be initialized, and a function should
 //   be called to render this game state.
 botEl.addEventListener("click", botButton);
-//botButton(botEl);

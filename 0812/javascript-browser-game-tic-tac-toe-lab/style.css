@@ -3,6 +3,11 @@ body {
   /* Use a system font, if none are available use an available sans-sarif */
   font-family: system-ui, sans-serif;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .board {
@@ -20,6 +25,7 @@ body {
 }
 
 #reset {
+  margin-top: 20px;
   width: 10%;
   aspect-ratio: 2/1;
   border: 3px solid black;
