@@ -26,3 +26,11 @@ body {
   font-size: 30px;
   text-align: center;
 }
+
+#bot {
+  width: 10%;
+  aspect-ratio: 2/1;
+  border: 3px solid black;
+  font-size: 30px;
+  text-align: center;
+}
