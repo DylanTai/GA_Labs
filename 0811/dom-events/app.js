@@ -51,8 +51,6 @@ const handleEquals = () => {
                 break;
         }
         whichNum = 1;
-        operand2 = 0;
-        operator = "";
         printNum(operand1);
     }
 };
@@ -66,7 +64,9 @@ const handleOper = (event) => {
         printNum(operand1);
     }
     else {
-        handleEquals();
+        if (whichNum === 2)
+            handleEquals();
+        operand2 = 0;
         whichNum = 2;
         operator = event.target.textContent;
     }
