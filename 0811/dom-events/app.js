@@ -11,17 +11,19 @@ const numElement = Array.from(document.querySelectorAll(".number"));
 const operElement = Array.from(document.querySelectorAll(".operator"));
 const equalsElement = document.querySelector(".equals");
 const displayElement = document.querySelector(".display");
-let liElement = null;
+let hElement = null;
 
 /*-------------------------------- Functions --------------------------------*/
-const printNum = (operand) => {
-    if (liElement)
-        displayElement.removeChild(liElement);
-    liElement = document.createElement("li");
-    liElement.textContent = operand;
-    displayElement.appendChild(liElement);
+//Shows the inputted number on the calculator
+const printNum = (displayNum) => {
+    if (hElement)
+        displayElement.removeChild(hElement);
+    hElement = document.createElement("h");
+    hElement.textContent = displayNum;
+    displayElement.appendChild(hElement);
 };
 
+//Handles the number buttons
 const handleNum = (event) => {
     if (whichNum === 1)
         operand1 = operand1 * 10 + parseInt(event.target.textContent);
@@ -30,6 +32,8 @@ const handleNum = (event) => {
     printNum(whichNum === 1 ? operand1 : operand2);
 };
 
+
+//Handles the equals sign button (above handle operators because operators needs this function to work)
 const handleEquals = () => {
     if (operator !== "") {
         switch (operator) {
@@ -46,13 +50,14 @@ const handleEquals = () => {
                 operand1 = parseInt(operand1) / parseInt(operand2);
                 break;
         }
+        whichNum = 1;
         operand2 = 0;
         operator = "";
-        whichNum = 1;
         printNum(operand1);
     }
 };
 
+//Handles the operator buttons
 const handleOper = (event) => {
     if (event.target.textContent === "C") {
         whichNum = 1;
