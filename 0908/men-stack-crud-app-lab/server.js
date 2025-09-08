@@ -1,10 +1,12 @@
-import express from "express";
 import dotenv from "dotenv";
-import mongoose from "mongoose";
+import express from "express";
 import methodOverride from "method-override";
+import mongoose from "mongoose";
+
 import Plant from "./models/plant.js";
 
 dotenv.config();
+
 mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
