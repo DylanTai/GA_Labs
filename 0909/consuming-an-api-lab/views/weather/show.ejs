@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Current Weather</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="city"><%= city || "Unknown City" %></div>
+      <div class="temp"><%= temp ? temp + "°F" : "—" %></div>
+      <div class="desc"><%= desc || "No description" %></div>
+      <a href="/">Back to home!</a>
+    </div>
+  </body>
+</html>

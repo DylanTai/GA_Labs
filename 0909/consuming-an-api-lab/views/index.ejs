@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Lookup</title>
+  </head>
+  <body>
+    <h1>Check the Weather</h1>
+
+    <form action="/weather" method="post" autocomplete="off" novalidate>
+      <label for="zip">Enter your ZIP</label>
+      <input
+        type="text"
+        id="zip"
+        name="zip"
+        required
+        minlength="5"
+        maxlength="5"
+        size="10"
+        pattern="\\d{5}"
+        title="Enter a 5-digit US ZIP code"
+        value="<%= zip %>"
+      />
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <% if (error) { %>
+    <div class="error"><%= error %></div>
+    <% } %>
+  </body>
+</html>
