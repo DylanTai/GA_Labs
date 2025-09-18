@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Exercise 1: Updating the title of my home page to dynamically match the restaurant name -->
+    <title><%= restaurant.name %></title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+    <!-- Exercise 1: Using ejs to change name, address, and phone -->
+    <h1><%= restaurant.name %></h1>
+    <section>
+      <p><strong>Address:</strong> <%= restaurant.address %></p>
+      <p><strong>Phone:</strong> <%= restaurant.phone %></p>
+
+      <!-- Exercise 1: Level-up, post something based off a boolean -->
+      <% if (restaurant.isOpen) { %>
+      <p>Yes we are open!</p>
+      <% } else { %>
+      <p>Sorry, we are closed.</p>
+      <% } %>
+    </section>
+  </body>
+</html>
