@@ -52,7 +52,6 @@ const Bookshelf = () => {
             id="title"
             name="title"
             type="text"
-            placeholder="e.g., The Hobbit"
             value={newBook.title}
             onChange={handleInputChange}
             aria-label="Book title"
@@ -63,7 +62,6 @@ const Bookshelf = () => {
             id="author"
             name="author"
             type="text"
-            placeholder="e.g., J.R.R. Tolkien"
             value={newBook.author}
             onChange={handleInputChange}
             aria-label="Book author"
