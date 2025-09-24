@@ -1,0 +1,16 @@
+// src/App.jsx
+// App entry: renders the Bookshelf component.
+// Kept intentionally minimal for the lab.
+
+import Bookshelf from './components/Bookshelf/Bookshelf.jsx'
+
+const App = () => {
+  return (
+    <>
+      <h1>My Bookshelf</h1>
+      <Bookshelf />
+    </>
+  )
+}
+
+export default App
