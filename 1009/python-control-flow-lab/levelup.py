@@ -21,7 +21,7 @@ def guess_number():
     target_number = 42
 
     print("Guess my number between 1 and 100.")
-    print(f"You have five attempts to guess it.")
+    print("You have five attempts to guess it.")
     print()
     
     for attempt in range(1, 6):
